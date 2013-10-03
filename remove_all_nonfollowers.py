@@ -41,18 +41,18 @@ while us<totalcount:
 			print user
 			print us
 
-#			try:
-#				rel = api.user_relationship(user_id=user.id)
-#				if rel.incoming_status =='none' : 
-#	            			api.unfollow_user(user_id=user.id)
-#                  			print 'removed'
-#					r=r+1
-#					time.sleep(5+random.random())
-#			except:
-#				print 'api error'
-#				api.unfollow_user(user_id=user.id)
-#				time.sleep(5+random.random())	
-#				r=r+1
+			try:
+				rel = api.user_relationship(user_id=user.id)
+				if rel.incoming_status =='none' : 
+	            			api.unfollow_user(user_id=user.id)
+                  			print 'removed'
+					r=r+1
+					time.sleep(5+random.random())
+			except:
+				print 'api error'
+				api.unfollow_user(user_id=user.id)
+				time.sleep(5+random.random())	
+				r=r+1
 	try:
 		m_obj=re.search(r".+&cursor=(.+)", next)
 		max_tag_id=m_obj.group(1)

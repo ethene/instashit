@@ -4,7 +4,9 @@ import time
 import random
 import re
 
-access_token = "331762741.e1b377f.ae281d5df63f4cb0996940d707c2df39"
+start_time = time.time()
+time.sleep(2)
+access_token = "398903202.249fcce.3b3c4532d63646ed83b11046a58ea054"
 api = InstagramAPI(access_token=access_token)
 
 
@@ -14,3 +16,5 @@ def dump(obj):
 
 
 dump(api.user(211585314))
+
+print time.time() - start_time, "seconds"
