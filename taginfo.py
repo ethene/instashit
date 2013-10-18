@@ -13,7 +13,8 @@ tagname=sys.argv[1]
 taginfo=api.tag(tagname) 
 current_count=taginfo.media_count
 
-lastname="/home/bgp/DispatchDaemon/ins/"+str(tagname)+"_last.log"
+prefix="/home/was/.trace/"
+lastname=prefix+str(tagname)+"_last.log"
 
 try:
 	fo = open(lastname, "r+")
@@ -31,7 +32,7 @@ fo.close()
 difference = current_count-last_count
 
 
-now_hour_name="/home/bgp/DispatchDaemon/ins/"+str(now.hour)+"_"+str(tagname)+"_hour.log"
+now_hour_name=prefix+str(now.hour)+"_"+str(tagname)+"_hour.log"
 
 fo = open(now_hour_name, "wb")
 fo.write(str(difference));

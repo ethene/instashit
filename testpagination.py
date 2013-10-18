@@ -10,7 +10,7 @@ access_token = "211585314.e1b377f.d45639f8eb394f2fa0ee3a8176311562"
 api = InstagramAPI(access_token=access_token)
 
 tagname=sys.argv[1]
-media_crawl=100
+media_crawl=500
 
 #filename="/home/bgp/DispatchDaemon/ins/"+"added.log"
 #runtimelog="/home/bgp/DispatchDaemon/ins/"+"runtime.log"

@@ -1,7 +1,6 @@
 from instagram.client import InstagramAPI
 import os
 import random
-import time
 
 
 access_token = "211585314.e1b377f.d45639f8eb394f2fa0ee3a8176311562"

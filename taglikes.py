@@ -39,9 +39,9 @@ tagname=sys.argv[1]
 #d - common delay
 d=2 
 like_probability=0.5
-followstofollowedratio=0.83
+followstofollowedratio=0.85
 
-media_crawl=500
+media_crawl=700
 
 max_requests=150
 max_like_requests=345
@@ -231,7 +231,7 @@ fo.write("time per user\n");
 fo.write(str(runtime/(usercount+1)));
 fo.write("\n");
 fo.write("seconds per call\n");
-fo.write(str(runtime/calls));
+fo.write(str(runtime/calls+1));
 fo.write("\n");
 fo.write("followed users\n");
 fo.write(str(usercount));
